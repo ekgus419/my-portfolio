@@ -10,6 +10,7 @@
 
 ## 완성작
 [https://dh0419-portfolio.netlify.app](https://dh0419-portfolio.netlify.app/)
+해당 프로젝트는 정적 사이트를 쉽게 배포할 수 있는 **netlify** 를 이용하였습니다.
 
 ## 프로젝트 구조
 
