@@ -1,25 +1,24 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Sidebar from './components/Sidebar.jsx';
-import AboutMe from './components/AboutMe.jsx';
-import Career from './components/Career.jsx';
-import EducationAndCertificates from './components/EducationAndCertificates.jsx';
-import ToyProject from './components/ToyProject.jsx';
-import MainContent from './components/MainContent.jsx';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Sidebar from './components/Sidebar';
+import AboutMeView from './views/AboutMeView';
+import CareerView from './views/CareerView';
+import EducationAndCertificatesView from './views/EducationAndCertificatesView';
+import ToyProjectView from './views/ToyProjectView';
 
 const App = () => {
     return (
         <Router>
             <div className="flex h-screen bg-gray-100">
                 <Sidebar />
-                <MainContent>
+                <main className="flex-1 flex flex-col h-full overflow-y-auto p-10 bg-gray-100">
                     <Routes>
-                        <Route path="/" element={<AboutMe />} />
-                        <Route path="/career" element={<Career />} />
-                        <Route path="/education-and-certificates" element={<EducationAndCertificates />} />
-                        <Route path="/toy-project" element={<ToyProject />} />
+                        <Route path="/" element={<AboutMeView />} />
+                        <Route path="/career" element={<CareerView />} />
+                        <Route path="/education" element={<EducationAndCertificatesView />} />
+                        <Route path="/toy-projects" element={<ToyProjectView />} />
                     </Routes>
-                </MainContent>
+                </main>
             </div>
         </Router>
     );

@@ -1,5 +1,4 @@
-import React, { useState } from 'react';
-import { CareerInfo } from '../data/CareersData';
+import React from 'react';
 
 const CareerItem = ({ item }) => (
     <article className='flex-1 min-w-[280px] bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden'>
@@ -13,7 +12,7 @@ const CareerItem = ({ item }) => (
     </article>
 );
 
-const CareerItemDetails = ({ details, expanded, toggleDetail, index }) => (
+const CareerItemDetails = ({ details, expanded, onToggle, index }) => (
     <div className='mb-6'>
         <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
             {details.slice(0, expanded ? details.length : 3).map((item, itemIndex) => (
@@ -23,7 +22,7 @@ const CareerItemDetails = ({ details, expanded, toggleDetail, index }) => (
         {details.length > 3 && (
             <div className='text-right mt-4'>
                 <button
-                    onClick={() => toggleDetail(index)}
+                    onClick={() => onToggle(index)}
                     className='text-blue-500 hover:underline'
                 >
                     {expanded ? '간단히 보기' : '더보기'}
@@ -33,18 +32,9 @@ const CareerItemDetails = ({ details, expanded, toggleDetail, index }) => (
     </div>
 );
 
-const Career = () => {
-    const [expandedCareers, setExpandedCareers] = useState({});
-
-    const toggleDetail = (index) => {
-        setExpandedCareers(prev => ({
-            ...prev,
-            [index]: !prev[index]
-        }));
-    };
-
+const Career = ({ CareerInfo, expandedCareers, onToggle }) => {
     return (
-        <section className='p-6 bg-gray-50 rounded-lg shadow-lg'>
+        <section className='p-6 bg-white rounded-lg shadow-lg'>
             <header>
                 <h2 className='text-3xl font-extrabold mb-6 text-gray-800'>Career</h2>
                 <p className='text-gray-600 mb-6'>다양한 프로젝트를 통해 얻은 경험과 성과를 소개합니다.</p>
@@ -62,7 +52,7 @@ const Career = () => {
                                 key={detailIndex}
                                 details={detail.items}
                                 expanded={expandedCareers[careerIndex]}
-                                toggleDetail={toggleDetail}
+                                onToggle={onToggle}
                                 index={careerIndex}
                             />
                         ))}

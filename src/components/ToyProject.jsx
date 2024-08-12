@@ -34,7 +34,7 @@ const ToyProjectCard = ({ project }) => (
   </div>
 );
 
-const ToyProject = () => {
+const ToyProject = ({ ToyProjectInfo }) => {
   return (
     <div className='p-6 bg-white rounded-lg shadow-md'>
       <h2 className='text-3xl font-extrabold mb-6 text-gray-800'>Toy Project</h2>

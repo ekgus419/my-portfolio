@@ -1,6 +1,6 @@
 import React from 'react';
+import { FaUserAlt, FaBriefcase, FaGraduationCap, FaTools, FaFileAlt, FaBlog, FaGithub, FaEnvelope } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
-import { FaUserAlt, FaBriefcase, FaGraduationCap, FaTools, FaEnvelope, FaFileAlt, FaBlog, FaGithub } from 'react-icons/fa';
 import profileImage from '../assets/images/profile.jpg';
 
 const Sidebar = () => (
@@ -12,10 +12,10 @@ const Sidebar = () => (
         </div>
         <nav className='p-0 mb-6'>
             <ul className='flex flex-col space-y-2'>
-                <li><Link to="/" className='text-base text-gray-800 focus:outline-none'>About Me</Link></li>
-                <li><Link to="/career" className='text-base text-gray-800 focus:outline-none'>Career</Link></li>
-                <li><Link to="/education-and-certificates" className='text-base text-gray-800 focus:outline-none'>Edu & Certs</Link></li>
-                <li><Link to="/toy-project" className='text-base text-gray-800 focus:outline-none'>Toy Project</Link></li>
+                <li><Link to="/" className="text-base text-gray-800 focus:outline-none">About Me</Link></li>
+                <li><Link to="/career" className="text-base text-gray-800 focus:outline-none">Career</Link></li>
+                <li><Link to="/education" className="text-base text-gray-800 focus:outline-none">Edu & Certs</Link></li>
+                <li><Link to="/toy-projects" className="text-base text-gray-800 focus:outline-none">Toy Project</Link></li>
             </ul>
         </nav>
         <footer className='flex flex-row items-center justify-center space-x-4 mt-auto'>
