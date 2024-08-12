@@ -1,9 +1,9 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FaUserAlt, FaBriefcase, FaGraduationCap, FaTools, FaEnvelope, FaFileAlt, FaBlog, FaGithub } from 'react-icons/fa';
-import SidebarTab from './SidebarTab';
 import profileImage from '../assets/images/profile.jpg';
 
-const Sidebar = ({ selectedTab, onTabClick }) => (
+const Sidebar = () => (
     <aside className='w-1/6 bg-gray-100 text-gray-800 p-6 border-r border-gray-300 shadow-md h-screen flex flex-col'>
         <div className='mb-6 text-center'>
             <img src={profileImage} alt='채다현' className='w-48 h-48 mx-auto rounded-full mb-4' />
@@ -12,10 +12,10 @@ const Sidebar = ({ selectedTab, onTabClick }) => (
         </div>
         <nav className='p-0 mb-6'>
             <ul className='flex flex-col space-y-2'>
-                <SidebarTab selectedTab={selectedTab} icon={FaUserAlt} label='About Me' onClick={() => onTabClick('AboutMe')} />
-                <SidebarTab selectedTab={selectedTab} icon={FaBriefcase} label='Career' onClick={() => onTabClick('Career')} />
-                <SidebarTab selectedTab={selectedTab} icon={FaGraduationCap} label='Edu & Certs' onClick={() => onTabClick('EducationAndCertificates')} />
-                <SidebarTab selectedTab={selectedTab} icon={FaTools} label='Toy Project' onClick={() => onTabClick('ToyProject')} />
+                <li><Link to="/" className='text-base text-gray-800 focus:outline-none'>About Me</Link></li>
+                <li><Link to="/career" className='text-base text-gray-800 focus:outline-none'>Career</Link></li>
+                <li><Link to="/education-and-certificates" className='text-base text-gray-800 focus:outline-none'>Edu & Certs</Link></li>
+                <li><Link to="/toy-project" className='text-base text-gray-800 focus:outline-none'>Toy Project</Link></li>
             </ul>
         </nav>
         <footer className='flex flex-row items-center justify-center space-x-4 mt-auto'>
