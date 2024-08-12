@@ -1,70 +1,57 @@
-# Getting Started with Create React App
+# my-portfolio
+이 포트폴리오 서비스는 React를 기반으로 깔끔하고 모던한 디자인을 목표로 하였습니다. 
+개인 프로젝트와 작업물들을 소개하며, 저의 기술 스택과 경험을 보여주는 서비스입니다. 
+컴포넌트는 UI와 구조를 담당하며, View에서는 데이터와 상태를 관리하도록 설계되었습니다.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## 개발 환경
+* Visual Studio Code
+* Git
 
-In the project directory, you can run:
+## 완성작
+[https://dh0419-portfolio.netlify.app](https://dh0419-portfolio.netlify.app/)
 
-### `npm start`
+## 프로젝트 구조
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- **`.gitignore`**
+  - Git에서 추적하지 않을 파일 목록을 정의합니다.
+- **`README.md`**
+  - 프로젝트에 대한 설명과 문서를 포함합니다.
+- **`package-lock.json`**
+  - 프로젝트의 의존성 버전을 고정합니다.
+- **`package.json`**
+  - 프로젝트의 메타데이터 및 의존성을 정의합니다.
+- **`public/`** : 정적 파일을 포함하는 디렉토리
+  - **`favicon.ico`**
+    - 사이트의 파비콘 파일입니다.
+  - **`index.html`** : 애플리케이션의 메인 HTML 파일입니다.
+- **`src/`** : 소스 코드가 위치하는 디렉토리
+  - **`App.css`** : 애플리케이션의 스타일시트입니다.
+  - **`App.jsx`** : 주요 React 컴포넌트입니다.
+  - **`assets/`** : 정적 자산을 포함하는 디렉토리
+    - **`images/`** : 이미지 파일 디렉토리
+      - **`profile.jpg`** : 프로필 이미지 파일입니다.
+  - **`components/`** : React 컴포넌트를 포함하는 디렉토리
+    - **`AboutMe.jsx`** : 'About Me' 컴포넌트입니다.
+    - **`Career.jsx`** : 'Career' 컴포넌트입니다.
+    - **`EducationAndCertificates.jsx`** : 교육 및 인증 컴포넌트입니다.
+    - **`Sidebar.jsx`** : 사이드바 컴포넌트입니다.
+    - **`ToyProject.jsx`** : 장난감 프로젝트 컴포넌트입니다.
+    - **`aboutme/`** : 'About Me' 관련 서브컴포넌트
+      - **`Contact.jsx`** : 연락처 컴포넌트입니다.
+      - **`Introduction.jsx`** : 소개 컴포넌트입니다.
+      - **`SkillItem.jsx`** : 기술 항목 컴포넌트입니다.
+      - **`Tooltip.jsx`** : 툴팁 컴포넌트입니다.
+  - **`data/`** : 데이터 파일 디렉토리
+    - **`AboutMeData.js`** : 'About Me' 데이터 파일입니다.
+    - **`CareersData.js`** : 경력 데이터 파일입니다.
+    - **`EducationAndCertificatesData.js`** : 교육 및 인증 데이터 파일입니다.
+    - **`ToyProjectData.js`** : 장난감 프로젝트 데이터 파일입니다.
+  - **`index.css`** : 전역 스타일시트입니다.
+  - **`index.js`** : 애플리케이션의 진입점 파일입니다.
+  - **`views/`** : 뷰 컴포넌트를 포함하는 디렉토리
+    - **`AboutMeView.jsx`** : 'About Me' 뷰 컴포넌트입니다.
+    - **`CareerView.jsx`** : 'Career' 뷰 컴포넌트입니다.
+    - **`EducationAndCertificatesView.jsx`** : 교육 및 인증 뷰 컴포넌트입니다.
+    - **`ToyProjectView.jsx`** : 장난감 프로젝트 뷰 컴포넌트입니다.
+- **`tailwind.config.js`** : Tailwind CSS 설정 파일입니다.

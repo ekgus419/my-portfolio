@@ -1,8 +1,33 @@
-import { FaGithub, FaJava, FaReact, FaDocker, FaCogs, FaInfo } from 'react-icons/fa';
+import { FaGithub, FaJava, FaReact, FaDocker, FaCogs, FaInfo, FaHtml5, FaCss3 } from 'react-icons/fa';
 import { MdQueryBuilder } from 'react-icons/md';
 import { SiSpringboot, SiGradle, SiPostgresql, SiMariadb, SiJunit5, SiThymeleaf, SiPostman } from 'react-icons/si';
 
 export const ToyProjectInfo = [
+    {
+        title: 'my-portfolio',
+        details: [
+            {
+                title: '포트폴리오',
+                items: [
+                    {
+                        subtitle: '프로젝트 소개',
+                        description: '이 포트폴리오 서비스는 React를 기반으로 깔끔하고 모던한 디자인을 목표로 하였습니다. 개인 프로젝트와 작업물들을 소개하며, 저의 기술 스택과 경험을 보여주는 서비스입니다. 컴포넌트는 UI와 구조를 담당하며, View에서는 데이터와 상태를 관리하도록 설계되었습니다.'
+                    },
+                    {
+                        subtitle: '기술 스택',
+                        description: (
+                            <div className='flex space-x-4 mt-2'>
+                                <FaReact className='text-3xl text-red-600' title='React' />
+                                <FaHtml5 className='text-3xl text-green-600' title='HTML' />
+                                <FaCss3 className='text-3xl text-blue-600' title='Css' />
+                            </div>
+                        )
+                    },
+                ]
+            }
+        ],
+        githubUrl: 'https://github.com/ekgus419/my-portfolio'
+    },
     {
         title: 'blog-api',
         details: [

@@ -1,6 +1,5 @@
 import React from 'react';
 import { FaGithub } from 'react-icons/fa';
-import { ToyProjectInfo } from '../data/ToyProjectData';
 
 const ToyProjectDetail = ({ detail }) => (
   <div className='mb-4'>
