@@ -26,7 +26,7 @@ export const SkillsInfo = [
 export const ContactInfo = [
     {
         Icon: FaEnvelope,
-        text: 'ekgus419@gmai.com',
+        text: 'ekgus419@gmail.com',
     },
     {
         Icon: FaPhone,

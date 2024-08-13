@@ -3,17 +3,17 @@
 개인 프로젝트와 작업물들을 소개하며, 저의 기술 스택과 경험을 보여주는 서비스입니다. 
 컴포넌트는 UI와 구조를 담당하며, View에서는 데이터와 상태를 관리하도록 설계되었습니다.
 
-
 ## 개발 환경
 * Visual Studio Code
 * Git
 
 ## 완성작
 [https://dh0419-portfolio.netlify.app](https://dh0419-portfolio.netlify.app/)
-해당 프로젝트는 정적 사이트를 쉽게 배포할 수 있는 **netlify** 를 이용하였습니다.
+
+해당 프로젝트는 정적 사이트를 쉽게 배포할 수 있는 `Netlify`를 사용하기로 했습니다. 
+`Netlify`는 `private` 저장소를 지원하며, `Git` 반영과 동시에 배포할 수 있어 유용했습니다.
 
 ## 프로젝트 구조
-
 - **`.gitignore`**
   - Git에서 추적하지 않을 파일 목록을 정의합니다.
 - **`README.md`**
@@ -24,7 +24,7 @@
   - 프로젝트의 메타데이터 및 의존성을 정의합니다.
 - **`public/`** : 정적 파일을 포함하는 디렉토리
   - **`favicon.ico`**
-    - 사이트의 파비콘 파일입니다.
+    - 사이트의 파비콘 파일입니다. 리액트의 기본 파비콘 파일을 사용하였습니다.
   - **`index.html`** : 애플리케이션의 메인 HTML 파일입니다.
 - **`src/`** : 소스 코드가 위치하는 디렉토리
   - **`App.css`** : 애플리케이션의 스타일시트입니다.
@@ -44,15 +44,15 @@
       - **`SkillItem.jsx`** : 기술 항목 컴포넌트입니다.
       - **`Tooltip.jsx`** : 툴팁 컴포넌트입니다.
   - **`data/`** : 데이터 파일 디렉토리
-    - **`AboutMeData.js`** : 'About Me' 데이터 파일입니다.
+    - **`AboutMeData.js`** : About Me 데이터 파일입니다.
     - **`CareersData.js`** : 경력 데이터 파일입니다.
-    - **`EducationAndCertificatesData.js`** : 교육 및 인증 데이터 파일입니다.
+    - **`EducationAndCertificatesData.js`** : 교육 및 자격증 데이터 파일입니다.
     - **`ToyProjectData.js`** : 장난감 프로젝트 데이터 파일입니다.
   - **`index.css`** : 전역 스타일시트입니다.
   - **`index.js`** : 애플리케이션의 진입점 파일입니다.
   - **`views/`** : 뷰 컴포넌트를 포함하는 디렉토리
-    - **`AboutMeView.jsx`** : 'About Me' 뷰 컴포넌트입니다.
+    - **`AboutMeView.jsx`** : About Me 뷰 컴포넌트입니다.
     - **`CareerView.jsx`** : 'Career' 뷰 컴포넌트입니다.
-    - **`EducationAndCertificatesView.jsx`** : 교육 및 인증 뷰 컴포넌트입니다.
+    - **`EducationAndCertificatesView.jsx`** : 교육 및 자격증 뷰 컴포넌트입니다.
     - **`ToyProjectView.jsx`** : 장난감 프로젝트 뷰 컴포넌트입니다.
-- **`tailwind.config.js`** : Tailwind CSS 설정 파일입니다.
+- **`tailwind.config.js`** : Tailwind CSS 설정 파일입니다. `src` 폴더 아래에 `js,jsx,ts,tsx` 파일에 Tailwind CSS를 적용시킵니다.
