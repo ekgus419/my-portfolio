@@ -17,15 +17,18 @@ const AboutMe = ({ SkillsInfo, ContactInfo, handleMouseEnter, handleMouseLeave, 
                 <header>
                     <h3 className='text-2xl font-bold mb-2'>Skills</h3>
                 </header>
-                <div className='flex space-x-6 pl-3'>
+                <div className='flex flex-wrap -mx-3'>
                     {SkillsInfo.map(({ Icon, colorClass, message }, index) => (
-                        <SkillItem
-                            key={index}
-                            Icon={Icon}
-                            colorClass={colorClass}
-                            onMouseEnter={(e) => handleMouseEnter(e, message)}
-                            onMouseLeave={handleMouseLeave}
-                        />
+                        <div className='w-full sm:w-1/2 md:w-1/3 px-3 mb-6' key={index}>
+                            <div className='flex items-center'>
+                                <div className={`text-3xl ${colorClass} mr-4`}>
+                                    <Icon />
+                                </div>
+                                <div>
+                                    <p className=''>{message}</p>
+                                </div>
+                            </div>
+                        </div>
                     ))}
                 </div>
             </section>

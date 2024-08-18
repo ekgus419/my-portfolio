@@ -7,7 +7,7 @@ export const ToyProjectInfo = [
         title: 'my-portfolio',
         details: [
             {
-                title: '포트폴리오',
+                title: 'My Portfolio',
                 items: [
                     {
                         subtitle: '프로젝트 소개',
