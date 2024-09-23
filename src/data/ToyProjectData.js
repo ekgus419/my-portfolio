@@ -60,7 +60,7 @@ export const ToyProjectInfo = [
         title: 'cafe-recommendation',
         details: [
             {
-                title: '카카오 주소 검색 API를 활용한 카페 찾기 서비스',
+                title: '카카오 주소 검색 API를 활용한 카페 추천 서비스',
                 items: [
                     {
                         subtitle: '프로젝트 소개',
