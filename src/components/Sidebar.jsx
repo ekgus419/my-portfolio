@@ -20,7 +20,7 @@ const Sidebar = () => (
             </ul>
         </nav>
         <footer className='flex flex-row items-center justify-center space-x-4 mt-auto'>
-            <a href='https://drive.google.com/file/d/1OEZ0m3eDdnA7vjbgFOk8oyr8iMc910qo/view?usp=drive_link' target='blank' className='flex items-center text-gray-700 hover:text-red-500'>
+            <a href='https://drive.google.com/file/d/1gM-HDtW7T_cUZd3hooNSRrLqCASp9kHI/view?usp=sharing' target='blank' className='flex items-center text-gray-700 hover:text-red-500'>
                 <FaFileAlt className='mr-2 text-xl md:text-2xl' />
             </a>
             <a href='https://dh-0419.tistory.com' target='blank' className='flex items-center text-gray-700 hover:text-red-500'>
