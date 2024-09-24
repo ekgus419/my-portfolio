@@ -19,7 +19,7 @@ export const CareerInfo = [
   },
   {
     title: '커넥트웨이브',
-    period: '2019년 2월 - 2024년 1월',
+    period: '2019년 12월 - 2024년 1월',
     details: [
       {
         items: [
