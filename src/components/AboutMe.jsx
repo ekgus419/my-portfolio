@@ -1,6 +1,5 @@
 import React from 'react';
 import { Introduction } from './aboutme/Introduction';
-import { SkillItem } from './aboutme/SkillItem';
 import { Contact } from './aboutme/Contact';
 import { Tooltip } from './aboutme/Tooltip';
 
@@ -9,30 +8,28 @@ const AboutMe = ({ SkillsInfo, ContactInfo, handleMouseEnter, handleMouseLeave, 
         <section className='p-6 bg-white rounded-lg shadow-md relative'>
             <header>
                 <h2 className='text-3xl font-extrabold mb-6 text-gray-800'>About Me</h2>
-                <p className='text-gray-600 mb-6'>제 소개를 드립니다.</p>
             </header>
             <Introduction />
             <hr className='my-4' />
-            <section>
+            <section className='my-6'>
                 <header>
-                    <h3 className='text-2xl font-bold mb-2'>Skills</h3>
+                    <h3 className='text-2xl font-bold mb-4'>Skills</h3>
                 </header>
-                <div className='flex flex-wrap -mx-3'>
-                    {SkillsInfo.map(({ Icon, colorClass, message }, index) => (
-                        <div className='w-full sm:w-1/2 md:w-1/3 px-3 mb-6' key={index}>
-                            <div className='flex items-center'>
-                                <div className={`text-3xl ${colorClass} mr-4`}>
-                                    <Icon />
-                                </div>
-                                <div>
-                                    <p className=''>{message}</p>
-                                </div>
-                            </div>
+                <div className='grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-6'>
+                    {SkillsInfo.map(({ section, items }, index) => (
+                        <div key={index}>
+                            <h4 className='text-lg font-medium text-gray-800 mb-2'>{section}</h4>
+                            <ul className='list-disc list-inside space-y-2 leading-relaxed text-gray-700'>
+                                {items.map((item, idx) => (
+                                    <li key={idx}>{item}</li>
+                                ))}
+                            </ul>
                         </div>
                     ))}
                 </div>
             </section>
-            <hr className='my-4' />
+
+            <hr className='my-6' />
             <Contact ContactInfo={ContactInfo} />
             {tooltip && (
                 <Tooltip position={tooltip.position}>

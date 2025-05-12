@@ -1,22 +1,12 @@
 import React from 'react';
 
-const CareerItem = ({ item }) => (
-    <article className='flex-1 min-w-[280px] bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden'>
-        <div className='p-4 flex items-start'>
-            <div className='mr-3 text-2xl'>{item.icon}</div>
-            <div>
-                <h5 className='font-semibold text-md text-gray-900 p-2 rounded-md mb-2'>{item.subtitle}</h5>
-                <p className='text-gray-700'>{item.description}</p>
-            </div>
-        </div>
-    </article>
-);
-
 const CareerItemDetails = ({ details, expanded, onToggle, index }) => (
     <div className='mb-6'>
-        <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4'>
+        <div className='flex flex-wrap gap-4 items-stretch'>
             {details.slice(0, expanded ? details.length : 3).map((item, itemIndex) => (
-                <CareerItem key={itemIndex} item={item} />
+                <div key={itemIndex} className='flex-1 min-w-[280px] max-w-full sm:max-w-[calc(50%-1rem)] md:max-w-[calc(33.333%-1rem)]'>
+                    <CareerItem item={item} />
+                </div>
             ))}
         </div>
         {details.length > 3 && (
@@ -32,12 +22,28 @@ const CareerItemDetails = ({ details, expanded, onToggle, index }) => (
     </div>
 );
 
+const CareerItem = ({ item }) => (
+    <article className='flex flex-col h-full bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden'>
+        <div className='p-4 flex flex-col flex-grow'>
+        <div className='flex items-start mb-3'>
+            <div className='mr-3 text-2xl'>{item.icon}</div>
+            <h5 className='font-semibold text-md text-gray-900'>{item.subtitle}</h5>
+        </div>
+        <ul className='text-gray-700 list-disc pl-5 space-y-1 flex-grow'>
+            {item.description.split('. ').map((desc, idx) => (
+            desc && <li key={idx}>{desc.endsWith('.') ? desc : `${desc}.`}</li>
+            ))}
+        </ul>
+        </div>
+    </article>
+);
+
 const Career = ({ CareerInfo, expandedCareers, onToggle }) => {
     return (
         <section className='p-6 bg-white rounded-lg shadow-lg'>
             <header>
                 <h2 className='text-3xl font-extrabold mb-6 text-gray-800'>Career</h2>
-                <p className='text-gray-600 mb-6'>다양한 프로젝트를 통해 얻은 경험과 성과를 소개합니다.</p>
+                <p className='text-gray-600 mb-6'>다양한 프로젝트를 통해 문제를 해결하고, 실질적인 성과를 만들어냈습니다.</p>
             </header>
             <hr className='my-4 border-gray-300' />
             <div className='flex flex-wrap gap-6'>
